@@ -23,6 +23,8 @@ const purchase = function(itemID, requestedQuantity) {
       if (error) throw error;
       if (results[0].stock_quantity < requestedQuantity) {
         console.log(`Insufficient Quantity!`);
+        viewProducts();
+        connection.end();
       } else {
         const newStock = results[0].stock_quantity - requestedQuantity;
         const amountDue = results[0].price * requestedQuantity;
@@ -35,6 +37,7 @@ const purchase = function(itemID, requestedQuantity) {
             console.log(`_________________________________`);
           }
         );
+        viewProducts();
         connection.end();
       }
     }
@@ -85,6 +88,9 @@ const viewProducts = function() {
     `SELECT item_id, product_name, price, stock_quantity FROM products`,
     function(error, results, fields) {
       if (error) throw error;
+      console.log("");
+      console.log(`*_*^*UPDATED STOCK*^*_*`);
+      console.log(`---------------------------------`);
       results.forEach(element => {
         console.log(
           `${element.item_id}:`,
