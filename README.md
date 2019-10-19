@@ -17,7 +17,7 @@ I use a key file to pull sensitive keys from my .env file for use in the code.
 
 ## Video of Functioning App:
 
-![Bamazon Homework][./working.mov](https://drive.google.com/file/d/1aq7iJw5Vtalgw9zzJZXwMcpv4g55SDoi/view?usp=sharing)
+![Bamazon Homework][./bamazon.mov](https://drive.google.com/open?id=1XCxOk9KZmg6pwypJ2_AScikglKnL8ZQu)
 
 ## Sole developer: trvcytg
 
